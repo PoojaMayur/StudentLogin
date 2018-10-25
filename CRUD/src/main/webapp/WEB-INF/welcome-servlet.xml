@@ -15,13 +15,13 @@
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="suffix" value=".jsp"></property>
-	<property name="prefix" value="/jsp/"></property>
+	
 	</bean>
 
 
 	<bean id="cp" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-	<property name="url" value="jdbc:mysql://localhost:3306/springcrudint"></property>
+	<property name="url" value="jdbc:mysql://localhost:3306/git"></property>
 	<property name="username" value="root"></property>
 	<property name="password" value="root"></property>
 	
@@ -30,14 +30,14 @@
 	<property name="dataSource" ref="cp"></property>
 	<property name="hibernateProperties">
 	<props>
-	<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+	<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 	<prop key="hibernate.hbm2ddl.auto">update</prop>
 	</props>
 	
 	</property>
 	<property name="annotatedClasses">
 	<list>
-	<value>com.model.User</value>
+	<value>com.model.Student</value>
 	</list>
 	</property>
 	</bean>

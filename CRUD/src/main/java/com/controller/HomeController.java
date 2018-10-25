@@ -10,8 +10,16 @@ public class HomeController {
 	@RequestMapping("/")
 	public String Start()
 	{
+		System.out.println("In start");
 		return "Login";
 		
+	}
+	
+	@RequestMapping("/registerpage")
+	public String RegisterPage()
+	{
+		System.out.println("In register");
+		return "Register";
 	}
 	
 	
