@@ -33,5 +33,11 @@ public class ServiceImpl implements ServiceInterface {
 		dao.delete(id);
 		
 	}
+	@Override
+	public Student editStudent(int id) {
+		Student s=dao.findOne(id);
+		
+		return s;
+	}
 
 }

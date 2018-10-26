@@ -72,8 +72,7 @@ public class HomeController {
 		
 	
 }
-
-
+	
 	
 	@RequestMapping("/del")
 	public String deleteStudent(@RequestParam int id,Model model)
@@ -86,6 +85,20 @@ public class HomeController {
 		return "Success";
 		
 	}
+	
+	
+	@RequestMapping("/edit")
+	public String editStudent(@RequestParam int id,Model model)
+	{
+		System.out.println("In edit");
+		service.editStudent(id);
+	Student s=service.editStudent(id);
+		model.addAttribute("sdata",s);
+		return "Edit";
+	}
+	
+	
+	
 	
 	
 }
