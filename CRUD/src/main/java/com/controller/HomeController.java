@@ -98,6 +98,16 @@ public class HomeController {
 	}
 	
 	
+	@RequestMapping("/update")
+	public String updateStudent(@ModelAttribute Student s,Model model)
+	{
+		System.out.println("In update");
+		Student s1=service.updateStudent(s);
+		List<Student>li=service.getAllData();
+		model.addAttribute("sdata", li);
+		return "Success";
+	}
+	
 	
 	
 	

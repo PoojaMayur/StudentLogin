@@ -39,5 +39,10 @@ public class ServiceImpl implements ServiceInterface {
 		
 		return s;
 	}
+	@Override
+	public Student updateStudent(Student s) {
+		return dao.save(s);
+		
+	}
 
 }

@@ -15,6 +15,8 @@ public interface ServiceInterface {
 	void deleteStudent(int id);
 
 	public Student editStudent(int id);
+
+	public Student updateStudent(Student s);
 	
 
 }
