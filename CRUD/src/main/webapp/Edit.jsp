@@ -10,6 +10,7 @@
 <form action="update">
 <center>
 <pre>
+
 <input type="hidden" name="id" value="${data.id}">
 
 NAME:<input type="text" name="name" value="${data.name}">
