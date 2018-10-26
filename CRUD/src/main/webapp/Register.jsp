@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-
+${msg}
 <body bgcolor="Cyan">
-<form action="register">
+<form action="reg">
 <center>
 <pre>
 NAME:<input type="text" name="name">
