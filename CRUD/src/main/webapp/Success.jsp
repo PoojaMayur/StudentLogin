@@ -9,7 +9,6 @@
 ${msg}
 <script type="text/javascript">
 function add() {
-	
 	alert("in add")
 	document.fn.action="registerpage";
 	document.fn.submit();
