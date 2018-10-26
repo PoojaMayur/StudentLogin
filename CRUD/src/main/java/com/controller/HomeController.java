@@ -2,10 +2,12 @@ package com.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.model.Student;
 import com.serviceInterface.ServiceInterface;
@@ -13,7 +15,7 @@ import com.serviceInterface.ServiceInterface;
 
 @Controller
 public class HomeController {
-
+@Autowired
 	ServiceInterface service;
 	
 	@RequestMapping("/")
@@ -54,7 +56,7 @@ public class HomeController {
 	@RequestMapping("/log")
 	public String loginStudent(@ModelAttribute Student s,Model model)
 	{
-		
+		System.out.println("In log");
 		Student s1=service.loginStudent(s);
 	if(s1!=null)
 	{
@@ -71,6 +73,18 @@ public class HomeController {
 	
 }
 
+
+	
+	@RequestMapping("/del")
+	public String deleteStudent(@RequestParam int id,Model model)
+	{
+		
+		System.out.println("In del");
+		service.deleteStudent(id);
+		
+		return "Success";
+		
+	}
 	
 	
 }
