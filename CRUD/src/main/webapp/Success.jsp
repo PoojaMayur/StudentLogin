@@ -10,16 +10,19 @@ ${msg}
 <script type="text/javascript">
 function add() {
 	
+	alert("in add")
 	document.fn.action="registerpage";
 	document.fn.submit();
 }
 function del() {
 	
+	alert("in delete")
 	document.fn.action="del";
 	document.fn.submit();
 }
 function edit() {
 
+	alert("in edit")
 	document.fn.action="edit";
 	document.fn.submit();
 }
@@ -40,7 +43,7 @@ function edit() {
 			
 				<c:forEach items="${data}" var="s">
 				<tr>
-					<td>${s.id}</td>
+					<td><input type="radio" name="id">${s.id}</td>
 					<td>${s.name}</td>
 					<td>${s.address}</td>
 					<td>${s.username}</td>
