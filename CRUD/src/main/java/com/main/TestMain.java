@@ -13,7 +13,7 @@ public class TestMain {
 	public static void main(String[] args) {
 		System.out.println("main");
 		SpringApplication.run(TestMain.class, args);
-		System.out.println("Started");
+		System.out.println("main End");
 	}
 }
 

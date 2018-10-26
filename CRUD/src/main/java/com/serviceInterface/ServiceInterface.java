@@ -12,11 +12,15 @@ public interface ServiceInterface {
 
 	public List<Student> getAllData();
 
+
+	
+
 	void deleteStudent(int id);
 
 	public Student editStudent(int id);
 
 	public Student updateStudent(Student s);
+
 	
 
 }
