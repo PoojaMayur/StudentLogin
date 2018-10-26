@@ -1,12 +1,19 @@
 package com.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.model.Student;
+import com.serviceInterface.ServiceInterface;
 
 
 @Controller
 public class HomeController {
 
+	ServiceInterface service;
+	
 	@RequestMapping("/")
 	public String Start()
 	{
@@ -21,6 +28,26 @@ public class HomeController {
 		System.out.println("In register");
 		return "Register";
 	}
+	
+	@RequestMapping("/reg")
+	public String saveStudent(@ModelAttribute Student s,Model model)
+	{
+       System.out.println("In reg");
+	
+		Student id=service.saveStudent(s);
+		System.out.println(id);
+		if(id!=null)
+		{
+			model.addAttribute("msg","Data is saved Successfully !");
+			return "Login";
+		}
+		else
+		{
+			model.addAttribute("msg","Data is not saved !");
+			return "Register";
+		}
+	}
+
 	
 	
 }

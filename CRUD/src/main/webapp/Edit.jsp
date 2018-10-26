@@ -6,24 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-${msg}
 <body>
-<form action="log">
-<center>
-<pre>
-		<font color="red">Login Page</font>
-		
-		Username:-<input type="text" name="username">
-		
-		Password:-<input type="text" name="password">
-		
-		<input type="submit" value="Login">  <a href="registerpage">Register here </a> 
 
-</pre>
-
-
-</center>
-
-</form>
 </body>
 </html>
