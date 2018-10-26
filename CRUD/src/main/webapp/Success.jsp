@@ -31,7 +31,8 @@ function edit() {
 <body bgcolor="cyan">
 	<form name="fn">
 
-
+			<font color="red">RECORDE</font>
+			
 		<table border="1" align="center">
 			
 			<th>Id</th>
@@ -39,7 +40,6 @@ function edit() {
 			<th>ADDRESS</th>
 			<th>USERNAME</th>
 			<th>PASSWORD</th>
-			
 			<c:forEach items="${data}" var="s">
 				<tr>
 					<td><input type="radio" name="id">${s.id}</td>
