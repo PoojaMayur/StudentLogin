@@ -72,8 +72,15 @@ public class HomeController {
 		
 	
 }
-	
-	
+	@RequestMapping("del")
+	public String deleteStudent(@RequestParam int id,Model model)
+	{
+		System.out.println("In del");
+		 service.deleteStudent(id);
+			List<Student>s1=service.getAllData();
+			model.addAttribute("sdata",s1);
+			return "Success";
+	}
 	
 	
 	
