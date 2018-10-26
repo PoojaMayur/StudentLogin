@@ -81,7 +81,8 @@ public class HomeController {
 		
 		System.out.println("In del");
 		service.deleteStudent(id);
-		
+		List<Student>li=service.getAllData();
+		model.addAttribute("sdata",li);
 		return "Success";
 		
 	}
