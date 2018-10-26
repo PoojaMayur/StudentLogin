@@ -68,6 +68,7 @@ public class HomeController {
 	{
 		model.addAttribute("msg","Wrong username and password");
 	}
+	
 	return "Login";
 		
 	
