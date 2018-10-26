@@ -12,7 +12,6 @@ public class TestMain {
 
 	public static void main(String[] args) {
 		System.out.println("main");
-		System.out.println("change");
 		SpringApplication.run(TestMain.class, args);
 		System.out.println("main End");
 	}

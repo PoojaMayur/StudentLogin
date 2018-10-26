@@ -28,5 +28,25 @@ public class ServiceImpl implements ServiceInterface {
 		List<Student>li=(List<Student>) dao.findAll();
 		return li;
 	}
+
 	
+
+	@Override
+	public void deleteStudent(int id) {
+		dao.delete(id);
+		
+	}
+	@Override
+	public Student editStudent(int id) {
+		Student s=dao.findOne(id);
+		
+		return s;
+	}
+	@Override
+	public Student updateStudent(Student s) {
+		return dao.save(s);
+		
+	}
+
+
 }

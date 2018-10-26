@@ -33,6 +33,7 @@ function edit() {
 			
 			<th>Id</th>
 			<th>NAME</th>
+			<th>ADDRESS</th>
 			<th>USERNAME</th>
 			<th>PASSWORD</th>
 			
