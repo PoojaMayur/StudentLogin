@@ -60,8 +60,8 @@ public class HomeController {
 		Student s1=service.loginStudent(s);
 	if(s1!=null)
 	{
-		List<Student>li=service.getAllData();
-	model.addAttribute("sdata",li);
+		List<Student> list=service.getAllData();
+	model.addAttribute("data",list);
 	return "Success";
 	}
 	else	
@@ -74,17 +74,7 @@ public class HomeController {
 }
 	
 	
-	@RequestMapping("/del")
-	public String deleteStudent(@RequestParam int id,Model model)
-	{
-		
-		System.out.println("In del");
-		service.deleteStudent(id);
-		List<Student>li=service.getAllData();
-		model.addAttribute("sdata",li);
-		return "Success";
-		
-	}
+	
 	
 	
 	@RequestMapping("/edit")
