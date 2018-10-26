@@ -1,4 +1,5 @@
 
+
 package com.controller;
 
 import java.util.List;
@@ -79,7 +80,7 @@ public class HomeController {
 		System.out.println("In del");
 		 service.deleteStudent(id);
 			List<Student>s1=service.getAllData();
-			model.addAttribute("sdata",s1);
+			model.addAttribute("data",s1);
 			return "Success";
 	}
 	
@@ -91,7 +92,7 @@ public class HomeController {
 		System.out.println("In edit");
 		service.editStudent(id);
 	Student s=service.editStudent(id);
-		model.addAttribute("sdata",s);
+		model.addAttribute("data",s);
 		return "Edit";
 	}
 	
@@ -102,7 +103,7 @@ public class HomeController {
 		System.out.println("In update");
 		Student s1=service.updateStudent(s);
 		List<Student>li=service.getAllData();
-		model.addAttribute("sdata", li);
+		model.addAttribute("data", li);
 		return "Success";
 	}
 	
