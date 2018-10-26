@@ -28,10 +28,5 @@ public class ServiceImpl implements ServiceInterface {
 		List<Student>li=(List<Student>) dao.findAll();
 		return li;
 	}
-	@Override
-	public void deleteStudent(int id) {
-		dao.delete(id);
-		
-	}
-
+	
 }

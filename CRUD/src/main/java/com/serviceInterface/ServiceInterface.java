@@ -12,7 +12,7 @@ public interface ServiceInterface {
 
 	List<Student> getAllData();
 
-	void deleteStudent(int id);
+	
 	
 
 }
