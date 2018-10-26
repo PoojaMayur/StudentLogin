@@ -13,16 +13,11 @@
 <pre>
 NAME:<input type="text" name="name">
 
-
-
 ADDRESS:<input type="text" name="address">
-
 
 USERNAME:<input type="text" name="username">
 
-
 PASSWORD:<input type="password" name="password">
-
 
       <input type="submit" value="Register">
 
