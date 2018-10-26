@@ -10,15 +10,15 @@
 <form action="update">
 <center>
 <pre>
-<input type="hidden" name="id" value="${sdata.id}">
+<input type="hidden" name="id" value="${data.id}">
 
-NAME:<input type="text" name="name" value="${sdata.name}">
+NAME:<input type="text" name="name" value="${data.name}">
 
-ADDRESS:<input type="text" name="address" value="${sdata.address}">
+ADDRESS:<input type="text" name="address" value="${data.address}">
 
-USERNAME:<input type="text" name="uname" value="${sdata.username}">
+USERNAME:<input type="text" name="username" value="${data.username}">
 
-PASSWORD:<input type="text" name="pass" value="${sdata.password}">
+PASSWORD:<input type="text" name="password" value="${data.password}">
 
 
            <input type="submit" value="UPDATE">

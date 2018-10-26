@@ -71,11 +71,7 @@ public class HomeController {
 	return "Login";
 		
 	
-}
-	
-	
-	
-	
+}	
 	
 	@RequestMapping("/edit")
 	public String editStudent(@RequestParam int id,Model model)
@@ -83,10 +79,19 @@ public class HomeController {
 		System.out.println("In edit");
 		service.editStudent(id);
 	Student s=service.editStudent(id);
-		model.addAttribute("sdata",s);
+		model.addAttribute("data",s);
 		return "Edit";
 	}
 	
+	@RequestMapping("/del")
+	public String deleteStudent(@RequestParam int id,Model model)
+	{
+		System.out.println("In deleteStudent");
+		service.deleteStudent(id);
+	List<Student>s1=service.getAllData();
+	model.addAttribute("data",s1);
+	return "Success";
+	}
 	
 	@RequestMapping("/update")
 	public String updateStudent(@ModelAttribute Student s,Model model)
@@ -94,7 +99,7 @@ public class HomeController {
 		System.out.println("In update");
 		Student s1=service.updateStudent(s);
 		List<Student>li=service.getAllData();
-		model.addAttribute("sdata", li);
+		model.addAttribute("data", li);
 		return "Success";
 	}
 	
