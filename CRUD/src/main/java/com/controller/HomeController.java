@@ -72,7 +72,7 @@ public class HomeController {
 		
 	
 }
-	@RequestMapping("del")
+	@RequestMapping("/del")
 	public String deleteStudent(@RequestParam int id,Model model)
 	{
 		System.out.println("In del");
