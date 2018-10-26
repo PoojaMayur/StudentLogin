@@ -30,7 +30,7 @@ public class ServiceImpl implements ServiceInterface {
 	}
 	@Override
 	public void deleteStudent(int id) {
-		
+		dao.delete(id);
 		
 	}
 
