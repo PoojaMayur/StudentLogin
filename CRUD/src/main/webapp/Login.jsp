@@ -10,6 +10,8 @@
 <form action="login">
 <center>
 <pre>
+		<font color="red">Login Page</font>
+		
 		Username:-<input type="text" name="username">
 		
 		Password:-<input type="text" name="password">
