@@ -39,7 +39,9 @@ function edit() {
 			<th>ADDRESS</th>
 			<th>USERNAME</th>
 			<th>PASSWORD</th>
+			
 			<c:forEach items="${data}" var="s">
+			
 				<tr>
 					<td><input type="radio" name="id" value="${s.id}"></td>
 					<td>${s.name}</td>
