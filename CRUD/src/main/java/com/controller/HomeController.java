@@ -80,7 +80,7 @@ public class HomeController {
 	@RequestMapping("/edit")
 	public String editStudent(@RequestParam int id,Model model)
 	{
-		System.out.println("In edit");
+		System.out.println("In edit controller------");
 		service.editStudent(id);
 	Student s=service.editStudent(id);
 		model.addAttribute("sdata",s);
