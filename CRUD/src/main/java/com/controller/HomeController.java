@@ -1,5 +1,4 @@
 
-
 package com.controller;
 
 import java.util.List;
@@ -74,25 +73,18 @@ public class HomeController {
 		
 	
 }
-	@RequestMapping("/del")
-	public String deleteStudent(@RequestParam int id,Model model)
-	{
-		System.out.println("In del");
-		 service.deleteStudent(id);
-			List<Student>s1=service.getAllData();
-			model.addAttribute("data",s1);
-			return "Success";
-	}
+	
+	
 	
 	
 	
 	@RequestMapping("/edit")
 	public String editStudent(@RequestParam int id,Model model)
 	{
-		System.out.println("In edit");
+		System.out.println("In edit controller------");
 		service.editStudent(id);
 	Student s=service.editStudent(id);
-		model.addAttribute("data",s);
+		model.addAttribute("sdata",s);
 		return "Edit";
 	}
 	
@@ -103,7 +95,7 @@ public class HomeController {
 		System.out.println("In update");
 		Student s1=service.updateStudent(s);
 		List<Student>li=service.getAllData();
-		model.addAttribute("data", li);
+		model.addAttribute("sdata", li);
 		return "Success";
 	}
 	
