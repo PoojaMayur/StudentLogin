@@ -38,10 +38,12 @@ function edit() {
 			<th>NAME</th>
 			<th>ADDRESS</th>
 			<th>USERNAME</th>
-			<th>PASSWORD</th>
+			<th>Password</th>
+			
 			<c:forEach items="${data}" var="s">
+			
 				<tr>
-					<td><input type="radio" name="id">${s.id}</td>
+					<td><input type="radio" name="id" value="${s.id}"></td>
 					<td>${s.name}</td>
 					<td>${s.address}</td>
 					<td>${s.username}</td>
